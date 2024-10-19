@@ -1,0 +1,9 @@
+.principal .global{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.principal__article{
+    border: 1px solid #aaa;
+}

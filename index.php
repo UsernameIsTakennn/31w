@@ -36,7 +36,7 @@
             <h2>Accueil</h2>
             <?php if (have_posts()): ?>
                 <?php while (have_posts()): the_post(); ?>
-                <article>
+                <article class="principal__article">
                     <h2><?php the_title(); ?></h2>
                     <p><?php echo wp_trim_words(get_the_excerpt(), 20, null); ?></p>
                 </article>
