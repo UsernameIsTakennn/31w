@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="entete">
         <section class="global">
             <h1>31W</h1>
             <nav>
@@ -31,13 +31,20 @@
             </form>
         </section>
     </header>
-    <main>
+    <main class="principal">
         <section class="global">
             <h2>Accueil</h2>
-            <p>Bienvenue sur 31W Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, sed? Cumque, non.</p>
+            <?php if (have_posts()): ?>
+                <?php while (have_posts()): the_post(); ?>
+                <article>
+                    <h2><?php the_title(); ?></h2>
+                    <p><?php echo wp_trim_words(get_the_excerpt(), 20, null); ?></p>
+                </article>
+            <?php endwhile; ?>
+            <?php endif ?>
         </section>
     </main>
-    <footer>
+    <footer class="pied">
         <section class="global">
             <div>1</div>
             <div>2</div>
