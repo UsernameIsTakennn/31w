@@ -12,3 +12,11 @@ function ajouter_style(){
 
 
 add_action('wp_enqueue_scripts', 'ajouter_style');
+
+
+function ajout_options(){
+    // Activer le support des menus personnalisés
+    add_theme_support('menus');
+}
+
+add_action("after_setup_theme", "ajout_options");
