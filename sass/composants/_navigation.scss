@@ -1,0 +1,18 @@
+.menu-principal-container{ //nav
+
+}
+.menu{ //ul
+    .menu-item{ //li
+        a{ //a
+
+        }
+    }
+}
+
+//équivalent à
+/*
+    .menu-principal-container
+    .menu-principal-container .menu
+    .menu-principal-container .menu .menu-item
+    .menu-principal-container .menu .menu-item a
+*/

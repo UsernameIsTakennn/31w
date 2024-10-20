@@ -34,7 +34,6 @@
                 )
                 ); ?>
 
-
             <form class="recherche">
                 <input type="search" class="recherche__input">
                 <img src="https://s2.svgbox.net/hero-outline.svg?ic=search&color=000" width="20" height="20">

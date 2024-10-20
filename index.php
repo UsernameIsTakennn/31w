@@ -28,14 +28,4 @@
         <?php endif ?>
         </section>
     </main>
-    <footer class="pied">
-        <section class="global">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-        </section>
-    </footer>
-    <?php wp_footer(); ?>
-</body>
-
-</html>
+<?php get_footer() ?>
