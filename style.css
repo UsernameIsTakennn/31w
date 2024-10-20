@@ -11,6 +11,17 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: theme-31w
 */
+:root {
+  --border-article: #d3b82c;
+  --background-article: #EBCE34;
+  --border-article-hover: #d39e2c;
+  --background-article-hover: #EBC182;
+  --background-global: rgba(255, 255, 255, 0.05);
+  --background-entete: #EBA134;
+  --background-principal: #EB8334;
+  --background-pied: #EB6334;
+}
+
 /***************************************************
 Normalize
 ***************************************************/
@@ -357,41 +368,109 @@ template {
 Layout
 ***************************************************/
 .global {
-  width: 1100px;
+  max-width: 1100px;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--background-global);
+  padding: 20px;
 }
 
 .entete {
-  background-color: aqua;
+  background-image: linear-gradient(var(--background-entete), var(--background-principal));
 }
 
 .principal {
-  background-color: rgb(211, 230, 42);
+  background-image: linear-gradient(var(--background-principal), var(--background-pied));
 }
 
 .pied {
-  background-color: rgb(53, 15, 5);
+  background-color: var(--background-pied);
 }
 
-/*_ --------------------------------------------- base _*/
+.pied .global {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pied div {
+  display: inline;
+}
+
 /***************************************************
 Composant
 ***************************************************/
 .principal__conteneur {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
 }
 
 .principal__article {
-  border: 1px solid #aaa;
-  flex: 1 1 340px;
+  border: 1px solid var(--border-article);
+  max-width: 320px;
+  border-radius: 5px;
   padding: 10px;
+  background-color: var(--background-article);
+  box-shadow: 3px 5px 5px #d3b82c;
+  transition-duration: 500ms;
 }
 
+.principal__article:hover {
+  border: 1px solid var(--border-article-hover);
+  background-color: var(--background-article-hover);
+  box-shadow: 5px 5px 5px #d39e2c;
+}
+
+.pied__logo {
+  max-width: 100%;
+  max-height: 50px;
+}
+
+.menu-principal-container {
+  display: flex;
+  justify-content: center;
+}
+
+.menu .menu-item {
+  list-style-type: none;
+  padding: 5px;
+  display: inline;
+}
+.menu .menu-item a {
+  background-color: var(--background-article);
+  color: black;
+  text-decoration: none;
+  padding: 7px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #d3b82c;
+  transition-duration: 500ms;
+}
+
+.menu-item > a:hover {
+  background-color: var(--background-article-hover);
+  box-shadow: 5px 5px 5px #d39e2c;
+}
+
+/*
+    .menu-principal-container
+    .menu-principal-container .menu
+    .menu-principal-container .menu .menu-item
+    .menu-principal-container .menu .menu-item a
+*/
+.recherche {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px;
+}
+
+.recherche__input {
+  border-radius: 5px;
+  margin-right: 10px;
+  height: 25px;
+}
+
+/*_ --------------------------------------------- base _*/
 h1 {
   font-size: clamp(0.75rem, -0.75rem + 4.8vw, 3.75rem);
 }
