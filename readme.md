@@ -9,7 +9,7 @@
 
 ## Exercice-1
 
-### objectif : Réaliser un thème da base
+### objectif : Réaliser un thème de base
 - Auteur : Splenderly Jean Louis
 - Titre : 31W
 - Description : Structure d'un thème 31w
