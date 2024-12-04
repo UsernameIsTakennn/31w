@@ -1,19 +1,19 @@
-:root{
-    --border-article: #d3b82c; //1
-    --background-article: #EBCE34; //2
+// :root{
+//     --border-article: #d3b82c; //1
+//     --background-article: #EBCE34; //2
 
-    --border-article-hover: #d39e2c; //3
-    --background-article-hover: #EBC182; //4
+//     --border-article-hover: #d39e2c; //3
+//     --background-article-hover: #EBC182; //4
 
-    --background-global: rgba(255, 255, 255, 0.05); //5
+//     --background-global: rgba(255, 255, 255, 0.05); //5
 
-    // --background-entete: #EBA134; //6
+//     // --background-entete: #EBA134; //6
 
-    // --background-principal: #EB8334; //7
+//     // --background-principal: #EB8334; //7
 
-    // --background-pied: #EB6334; //8
+//     // --background-pied: #EB6334; //8
 
-}
+// }
 $couleur1: --couleur1;
 $couleur2: --couleur2;
 $couleur3: --couleur3;
@@ -42,9 +42,3 @@ $couleur8: --couleur8;
         background-color : var(#{$arriere});
     }
 }
-
-// @mixin linear-gradient($selecteur ,$direction, $couleurstart, $couleurend){
-//     #{$selecteur}{
-//         background-color: linear-gradient(#{$direction}, #{$couleurstart}, #{$couleurend});
-//     }
-// }
