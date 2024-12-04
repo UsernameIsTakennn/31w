@@ -20,11 +20,11 @@ html, body{
 .global {
     max-width: 1100px;
     margin: 0 auto;
-    background-color: var(--background-global);
     padding: 20px;
     display: flex;
     justify-content: space-between;
 }
+@include regle_couleur_back(".global", $couleur5);
 
 // HEADER
 @include regle_couleur_back(".entete", $couleur6);

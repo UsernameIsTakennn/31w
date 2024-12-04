@@ -19,7 +19,6 @@
         a {
             //a
             display: block;
-            background-color: var(--background-article);
             color: black;
             text-decoration: none;
             padding: 7px;
@@ -28,12 +27,17 @@
             transition-duration: 500ms;
 
             &:hover {
-                    background-color: var(--background-article-hover);
                     box-shadow: 5px 5px 5px #d39e2c;
             }
         }
     }
 }
+
+@include regle_couleur_border(".menu .menu-item a", $couleur1);
+@include regle_couleur_back(".menu .menu-item a", $couleur2);
+
+@include regle_couleur_border(".menu .menu-item a:hover", $couleur3);
+@include regle_couleur_back(".menu .menu-item a:hover", $couleur4);
 
 //équivalent à
 /*

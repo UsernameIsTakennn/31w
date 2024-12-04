@@ -14,14 +14,6 @@ Text Domain: theme-31w
 /***************************************************
 Variables et mixin
 ***************************************************/
-:root {
-  --border-article: #d3b82c;
-  --background-article: #EBCE34;
-  --border-article-hover: #d39e2c;
-  --background-article-hover: #EBC182;
-  --background-global: rgba(255, 255, 255, 0.05);
-}
-
 /***************************************************
 Normalize
 ***************************************************/
@@ -389,18 +381,21 @@ html, body {
 .global {
   max-width: 1100px;
   margin: 0 auto;
-  background-color: var(--background-global);
   padding: 20px;
   display: flex;
   justify-content: space-between;
 }
 
+.global {
+  background-color: var(--couleur5);
+}
+
 .entete {
-  background-color: linear-gradient(top, --couleur6, --couleur7);
+  background-color: var(--couleur6);
 }
 
 .principal {
-  background-color: linear-gradient(top, --couleur7, --couleur8);
+  background-color: var(--couleur7);
 }
 
 .pied {
@@ -428,19 +423,31 @@ Composant
 }
 
 .principal__article {
-  border: 1px solid var(--border-article);
   max-width: 320px;
   border-radius: 5px;
   padding: 10px;
-  background-color: var(--background-article);
   box-shadow: 3px 5px 5px #d3b82c;
   transition-duration: 500ms;
 }
 
+.principal__article {
+  border: 1px solid var(--couleur1);
+}
+
+.principal__article {
+  background-color: var(--couleur2);
+}
+
 .principal__article:hover {
-  border: 1px solid var(--border-article-hover);
-  background-color: var(--background-article-hover);
   box-shadow: 5px 5px 5px #d39e2c;
+}
+
+.principal__article {
+  border: 1px solid var(--couleur3);
+}
+
+.principal__article:hover {
+  background-color: var(--couleur4);
 }
 
 .entete__global {
@@ -479,7 +486,6 @@ Composant
 }
 .menu .menu-item a {
   display: block;
-  background-color: var(--background-article);
   color: black;
   text-decoration: none;
   padding: 7px;
@@ -488,8 +494,23 @@ Composant
   transition-duration: 500ms;
 }
 .menu .menu-item a:hover {
-  background-color: var(--background-article-hover);
   box-shadow: 5px 5px 5px #d39e2c;
+}
+
+.menu .menu-item a {
+  border: 1px solid var(--couleur1);
+}
+
+.menu .menu-item a {
+  background-color: var(--couleur2);
+}
+
+.menu .menu-item a:hover {
+  border: 1px solid var(--couleur3);
+}
+
+.menu .menu-item a:hover {
+  background-color: var(--couleur4);
 }
 
 /*
@@ -517,7 +538,7 @@ h1 {
 
 .entete__titre h1 a {
   color: var(--couleur2);
-  background-color: var(--couleur7);
+  background-color: var(--couleur8);
 }
 
 h2 {

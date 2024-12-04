@@ -7,17 +7,17 @@
 }
 
 .principal__article{
-    border: 1px solid var(--border-article);
     max-width: 320px;
     border-radius: 5px;
     padding: 10px;
-    background-color: var(--background-article);
     box-shadow: 3px 5px 5px #d3b82c;
     transition-duration: 500ms;
 }
+@include regle_couleur_border(".principal__article", $couleur1);
+@include regle_couleur_back(".principal__article", $couleur2);
 
 .principal__article:hover{
-    border: 1px solid var(--border-article-hover);
-    background-color: var(--background-article-hover);
     box-shadow: 5px 5px 5px #d39e2c;
 }
+@include regle_couleur_border(".principal__article", $couleur3);
+@include regle_couleur_back(".principal__article:hover", $couleur4);

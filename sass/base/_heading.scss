@@ -5,7 +5,7 @@ h1 {
 @include regle_couleur_avant_arriere(
     ".entete__titre h1 a", 
     $couleur2, 
-    $couleur7
+    $couleur8
 );
 
 h2 {
